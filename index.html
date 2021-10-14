@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id=" title">online/offline</h2>
+    <p id="ooUpdate" style="text-align: center; font-weight: bold;" >Im not sure yet</p>
+    <script>
+        const ooUpdate = document.getElementById("ooUpdate");
+            if (navigator.online) {
+                ooUpdate.textContent = "we are online";
+                ooUpdate.style.color = "green";
+            }
+
+            window.addEventListener("online", function () {
+                ooUpdate.textContent ="we are online!";
+                ooUpdate.style.color = "green";
+
+        });
+            window.addEventListener("offline", function () {
+                ooUpdate.textContent = "we are offline";
+                ooUpdate.style.color = "red";
+            });
+
+    </script> 
+
+
+
+
+
+  </body>
+</html>
